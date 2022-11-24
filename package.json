@@ -1,0 +1,64 @@
+{
+  "name": "pixi-color-effects",
+  "version": "1.3.0",
+  "description": "A various color Matrix filters and Presets for pixi.js",
+  "main": "./dist/pixi-color-effects.umd.js",
+  "module": "./dist/pixi-color-effects.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PixiColorEffects/pixi-color-effects.git"
+  },
+  "homepage": "https://github.com/PixiColorEffects/pixi-color-effects#readme",
+  "bugs": {
+    "url": "https://github.com/PixiColorEffects/pixi-color-effects/issues"
+  },
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build && tsc -p ./tsconfig.dist.json -emitDeclarationOnly && tsc-alias -p ./tsconfig.dist.json",
+    "buildPage": "vite build --config vite.config.page.ts",
+    "preview": "vite preview",
+    "tag": "bump --commit --tag --push"
+  },
+  "devDependencies": {
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "@types/node": "^18.11.9",
+    "fhead": "^3.2.8",
+    "lil-gui": "^0.17.0",
+    "pixi.js": "^7.0.4",
+    "prettier": "^2.8.0",
+    "tsc-alias": "^1.7.1",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vite-plugin-string": "^1.1.2"
+  },
+  "peerDependencies": {
+    "@pixi/constants": "^7.0.4",
+    "@pixi/core": "^7.0.4",
+    "@pixi/filter-blur": "^7.0.4",
+    "@pixi/filter-color-matrix": "^7.0.4",
+    "@pixi/utils": "^7.0.4"
+  },
+  "fhead": {
+    "comment": "/** Do not use this config in production! */",
+    "root": "dist",
+    "repository": "https://github.com/PixiColorEffects/pixi-color-effects.git",
+    "patterns": [
+      ".js"
+    ],
+    "exclude": [],
+    "name": "CarlJin",
+    "email": "buffpal2016@gmail.com",
+    "license": "MIT",
+    "licenseText": "pixi-color-effects is licensed under the MIT License.",
+    "copyright": "https://github.com/PixiColorEffects/pixi-color-effects/blob/main/LICENSE",
+    "renewAll": true
+  },
+  "dependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "lodash-es": "^4.17.21"
+  }
+}
